@@ -1,0 +1,97 @@
+/* Contact — page-specific styles */
+.contact-grid {
+  display: grid; grid-template-columns: 1fr; gap: 4rem;
+  padding: 0 var(--gutter);
+}
+@media (min-width: 1000px) { .contact-grid { grid-template-columns: 5fr 7fr; gap: 6rem; align-items: start; } }
+
+.contact-aside { display: flex; flex-direction: column; gap: 3rem; }
+.contact-block { display: flex; flex-direction: column; gap: 0.75rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.contact-block:first-child { border-top: none; padding-top: 0; }
+.contact-block__label {
+  font-family: var(--font-body); font-size: 0.65rem; font-weight: 500;
+  letter-spacing: var(--tracking-wider); text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.contact-block__primary {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: 1.6rem; line-height: 1.2; color: var(--fg);
+  letter-spacing: -0.01em; margin: 0;
+}
+.contact-block__primary a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color var(--dur-fast); }
+.contact-block__primary a:hover { border-bottom-color: var(--forest); color: var(--forest); }
+.contact-block__sub { font-family: var(--font-serif); font-style: italic; font-size: 1rem; color: var(--fg-soft); margin: 0; line-height: 1.55; }
+.contact-block__hours { display: flex; flex-direction: column; gap: 0.4rem; padding-top: 0.5rem; }
+.contact-block__hours div {
+  display: grid; grid-template-columns: 110px 1fr; gap: 0.75rem;
+  font-family: var(--font-body); font-size: 0.85rem; color: var(--fg-soft);
+}
+.contact-block__hours strong {
+  font-weight: 500; font-size: 0.65rem; letter-spacing: var(--tracking-wider);
+  text-transform: uppercase; color: var(--fg-muted); padding-top: 2px;
+}
+
+.contact-people { display: flex; flex-direction: column; gap: 1.5rem; }
+.person {
+  display: grid; grid-template-columns: 56px 1fr; gap: 1rem; align-items: start;
+}
+.person__avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--forest); color: var(--bone);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 400; font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+.person:nth-child(2) .person__avatar { background: var(--bark); }
+.person__name {
+  font-family: var(--font-display); font-weight: 400; font-size: 1.1rem;
+  color: var(--fg); margin: 0; letter-spacing: -0.01em;
+}
+.person__role {
+  font-family: var(--font-body); font-size: 0.65rem; font-weight: 500;
+  letter-spacing: var(--tracking-wider); text-transform: uppercase;
+  color: var(--forest);
+}
+.person__email {
+  display: block; font-family: var(--font-serif); font-style: italic;
+  font-size: 0.95rem; color: var(--fg-soft); margin-top: 0.4rem;
+  text-decoration: none; border-bottom: 1px dotted var(--rule);
+}
+.person__email:hover { color: var(--forest); border-bottom-color: var(--forest); }
+
+.contact-form { display: flex; flex-direction: column; gap: 2rem; padding: 3rem; background: var(--bone); border: 1px solid var(--rule); }
+@media (max-width: 700px) { .contact-form { padding: 2rem; } }
+.cf-row { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 700px) { .cf-row { grid-template-columns: 1fr 1fr; } }
+.cf-field { display: flex; flex-direction: column; gap: 0.5rem; }
+.cf-field label {
+  font-family: var(--font-body); font-size: 0.65rem; font-weight: 500;
+  letter-spacing: var(--tracking-wider); text-transform: uppercase;
+  color: var(--fg-muted);
+}
+.cf-field input, .cf-field select, .cf-field textarea {
+  background: transparent; border: none; outline: none;
+  border-bottom: 1px solid var(--rule);
+  padding: 0.6rem 0;
+  font-family: var(--font-serif); font-size: 1.05rem; font-style: italic;
+  color: var(--fg);
+  transition: border-bottom-color var(--dur-fast);
+}
+.cf-field textarea { font-style: italic; min-height: 120px; resize: vertical; }
+.cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { border-bottom-color: var(--forest); }
+.cf-field input::placeholder, .cf-field textarea::placeholder { color: var(--fg-faint); }
+
+.contact-banner {
+  background: var(--forest); color: var(--bone);
+  padding: 5rem var(--gutter);
+  display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center;
+  margin-top: 6rem;
+}
+@media (min-width: 800px) { .contact-banner { grid-template-columns: 1fr auto; gap: 4rem; } }
+.contact-banner h3 {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.15;
+  letter-spacing: -0.02em; margin: 0; max-width: 24ch;
+  font-variation-settings: "opsz" 80;
+}
+.contact-banner h3 em { font-style: italic; font-family: var(--font-serif); font-weight: 300; color: #C7DAB0; }

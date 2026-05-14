@@ -1,0 +1,286 @@
+/* ============================================================
+   Madhuvan — Colors & Type
+   "Modern Indian editorial — quiet luxury meets vernacular soul"
+   ============================================================ */
+
+/* --- Webfonts (Google Fonts CDN) ---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,30..100&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..600&family=Inter:wght@300..600&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+
+:root {
+  /* ===== COLOR TOKENS =====
+     Warm earth palette. Cream is the canvas, charcoal is the ink,
+     terracotta is the brand, sage and honey are the seasoning. */
+
+  /* Base / surface */
+  --cream:           #F5F0E6;   /* primary background — handmade paper */
+  --cream-warm:      #EDE6D7;   /* secondary surface, sections */
+  --cream-deep:      #E4DAC5;   /* tertiary surface, dividers */
+  --bone:            #FAF6EE;   /* lightest, near-white cards */
+
+  /* Ink / text */
+  --charcoal:        #2A2824;   /* body text, primary ink */
+  --charcoal-soft:   #3D3A33;   /* secondary ink */
+  --stone:           #9B9388;   /* muted text, captions, meta */
+  --stone-light:     #BFB8AC;   /* placeholders, dividers on cream */
+
+  /* Brand accents — pulled directly from the wordmark */
+  --forest:          #3F5B33;   /* PRIMARY — deep forest green, the wordmark itself */
+  --forest-deep:     #2D4124;   /* hover / pressed */
+  --forest-soft:     #6B8559;   /* tints */
+  --leaf:            #8FAE6E;   /* lighter foliage green, accents */
+  --bark:            #6B4226;   /* tree trunk brown, secondary */
+  --bark-deep:       #4A2D1A;
+  --terracotta:      #B85C3D;   /* tertiary — the clay tile roofs in the photos */
+  --terracotta-deep: #8E4329;
+  --honey:           #C8923D;   /* sun in the wordmark, used sparingly */
+  --honey-deep:      #A0742C;
+
+  /* Semantic */
+  --bg:              var(--cream);
+  --bg-alt:          var(--cream-warm);
+  --bg-card:         var(--bone);
+  --fg:              var(--charcoal);
+  --fg-soft:         var(--charcoal-soft);
+  --fg-muted:        var(--stone);
+  --fg-faint:        var(--stone-light);
+  --accent:          var(--forest);
+  --accent-deep:     var(--forest-deep);
+  --accent-soft:     var(--forest-soft);
+  --rule:            #D9CFB8;   /* hairline divider on cream */
+  --rule-soft:       #E4DAC5;
+
+  /* ===== TYPE TOKENS ===== */
+  --font-display:    'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --font-serif:      'Cormorant Garamond', 'Fraunces', Georgia, serif;
+  --font-body:       'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-deva:       'Tiro Devanagari Hindi', 'Noto Serif Devanagari', serif;
+
+  /* Scale — generous, editorial. Mobile-first; large on desktop. */
+  --fs-xs:    0.75rem;    /* 12px — meta, captions */
+  --fs-sm:    0.875rem;   /* 14px — small body, labels */
+  --fs-base:  1rem;       /* 16px — body */
+  --fs-lg:    1.125rem;   /* 18px — large body, lead-in */
+  --fs-xl:    1.5rem;     /* 24px — h4 / pull-quote sm */
+  --fs-2xl:   2rem;       /* 32px — h3 */
+  --fs-3xl:   2.75rem;    /* 44px — h2 */
+  --fs-4xl:   4rem;       /* 64px — h1 */
+  --fs-5xl:   6rem;       /* 96px — display */
+  --fs-6xl:   8rem;       /* 128px — hero display */
+
+  /* Line heights — looser for serif headlines, tight for body */
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-loose:   1.7;
+
+  /* Letter-spacing — serif is set tight, sans tracked open for labels */
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.08em;
+  --tracking-wider:    0.16em;   /* small caps / labels */
+
+  /* Weights */
+  --w-light:    300;
+  --w-regular:  400;
+  --w-medium:   500;
+  --w-semibold: 600;
+
+  /* ===== SPACING — generous editorial rhythm ===== */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.5rem;
+  --space-6:  2rem;
+  --space-8:  3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+  --space-20: 12rem;       /* section breathing room on desktop */
+
+  /* ===== RADIUS — barely there. We are not a tech startup. ===== */
+  --radius-none: 0;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   8px;       /* upper bound — used sparingly */
+  --radius-pill: 999px;     /* only for tiny chips / badges */
+
+  /* ===== SHADOWS — soft, low, like daylight on plaster ===== */
+  --shadow-xs: 0 1px 2px rgba(42, 40, 36, 0.04);
+  --shadow-sm: 0 2px 8px rgba(42, 40, 36, 0.05);
+  --shadow-md: 0 8px 24px rgba(42, 40, 36, 0.07);
+  --shadow-lg: 0 24px 60px rgba(42, 40, 36, 0.10);
+
+  /* ===== EASING & MOTION ===== */
+  --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --dur-fast:    180ms;
+  --dur-base:    320ms;
+  --dur-slow:    640ms;
+  --dur-page:    1200ms;     /* hero parallax / scroll fade */
+
+  /* ===== LAYOUT ===== */
+  --max-w-prose:  62ch;       /* article body */
+  --max-w-page:   1280px;     /* outer container */
+  --max-w-narrow: 880px;      /* editorial column */
+  --gutter:       clamp(1.25rem, 4vw, 4rem);
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES — apply by default
+   ============================================================ */
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--w-regular);
+  line-height: var(--lh-normal);
+  text-wrap: pretty;
+}
+
+/* Display & headings — serif, tight, set in italic occasionally for romance */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: var(--w-light);
+  font-size: clamp(2.5rem, 6vw, var(--fs-5xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0 0 var(--space-6);
+  font-variation-settings: "opsz" 100, "SOFT" 50;
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: var(--w-light);
+  font-size: clamp(2rem, 4vw, var(--fs-3xl));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0 0 var(--space-5);
+  font-variation-settings: "opsz" 80;
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-4);
+}
+
+h4, .h4 {
+  font-family: var(--font-display);
+  font-weight: var(--w-regular);
+  font-style: italic;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  margin: 0 0 var(--space-3);
+}
+
+/* Eyebrow / kicker — small caps, tracked, in stone */
+.eyebrow, .kicker {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--w-medium);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* Devanagari accent */
+.deva {
+  font-family: var(--font-deva);
+  font-weight: var(--w-regular);
+  letter-spacing: 0;
+}
+
+/* Body */
+p {
+  margin: 0 0 var(--space-5);
+  font-size: var(--fs-base);
+  line-height: var(--lh-loose);
+  color: var(--fg-soft);
+  max-width: var(--max-w-prose);
+}
+
+.lead {
+  font-family: var(--font-serif);
+  font-weight: var(--w-light);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  font-style: italic;
+}
+
+/* Quotes — pull-quote serif, italic, generous */
+blockquote, .quote {
+  font-family: var(--font-display);
+  font-weight: var(--w-light);
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, var(--fs-2xl));
+  line-height: var(--lh-snug);
+  color: var(--fg);
+  border: none;
+  margin: var(--space-10) 0;
+  padding: 0 0 0 var(--space-5);
+  border-left: 1px solid var(--forest);
+}
+
+/* Captions / meta */
+.caption, figcaption, small {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: var(--w-regular);
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-muted);
+  line-height: var(--lh-normal);
+}
+
+/* Links — terracotta, underline on hover with subtle slide */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+a:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent-deep);
+}
+
+/* Code / mono — used rarely, for technical project notes */
+code, pre, .mono {
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+  font-size: 0.9em;
+  color: var(--charcoal-soft);
+  background: var(--cream-warm);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-xs);
+}
+
+/* Hairline rule */
+hr, .rule {
+  border: none;
+  height: 1px;
+  background: var(--rule);
+  margin: var(--space-10) 0;
+}
+
+/* Selection */
+::selection {
+  background: var(--forest);
+  color: var(--bone);
+}

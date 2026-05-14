@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" fill="none">
+  
+  <text x="240" y="92" text-anchor="middle" font-family="&#39;Fraunces&#39;, &#39;Cormorant Garamond&#39;, Georgia, serif" font-size="72" font-weight="400" letter-spacing="0.01em" fill="#3F5B33" font-variation-settings="&#39;opsz&#39; 100, &#39;SOFT&#39; 80">Madhuvan</text>
+
+  
+  <line x1="160" y1="118" x2="226" y2="118" stroke="#3F5B33" stroke-width="0.6"></line>
+  <g transform="translate(240, 118)" stroke="#3F5B33" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-6 0 C -3 -6, 3 -6, 6 0 C 3 6, -3 6, -6 0 Z"></path>
+    <path d="M-6 0 L 6 0" stroke-width="0.6"></path>
+  </g>
+  <line x1="254" y1="118" x2="320" y2="118" stroke="#3F5B33" stroke-width="0.6"></line>
+
+  
+  <text x="240" y="146" text-anchor="middle" font-family="&#39;Inter&#39;, sans-serif" font-size="11" font-weight="400" fill="#6B6258" letter-spacing="0.32em">PLOTS FOR A BETTER TOMORROW</text>
+
+  
+  <text x="240" y="180" text-anchor="middle" font-family="&#39;Tiro Devanagari Hindi&#39;, &#39;Noto Serif Devanagari&#39;, serif" font-size="22" font-weight="400" fill="#9B9388" letter-spacing="0.1em">मधुवन</text>
+</svg>

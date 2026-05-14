@@ -1,0 +1,25 @@
+/* The Land — page-specific styles */
+.trees-table { display: flex; flex-direction: column; }
+.trees-table__head,
+.trees-table__row,
+.trees-table__foot {
+  display: grid; grid-template-columns: 1.4fr 1.4fr 1.6fr auto; gap: 1.5rem;
+  padding: 1.1rem 0; border-bottom: 1px solid var(--rule-soft); align-items: baseline;
+}
+.trees-table__head {
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  font-family: var(--font-body); font-size: 0.65rem; letter-spacing: var(--tracking-wider);
+  text-transform: uppercase; color: var(--fg-muted);
+}
+.trees-table__foot { border-bottom: none; padding-top: 1.5rem; }
+@media (max-width: 700px) {
+  .trees-table__head,
+  .trees-table__row,
+  .trees-table__foot {
+    grid-template-columns: 1fr auto;
+  }
+  .trees-table__head span:nth-child(2),
+  .trees-table__head span:nth-child(3),
+  .trees-table__row span:nth-child(2),
+  .trees-table__row span:nth-child(3) { display: none; }
+}

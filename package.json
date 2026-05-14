@@ -1,0 +1,22 @@
+{
+  "name": "madhuvan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Madhuvan — a small settlement of homes among the trees, in a bend of the river, near Pune.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "vercel": "^54.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}

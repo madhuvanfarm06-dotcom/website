@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" fill="none">
+  
+  <g transform="translate(200, 8)">
+    <circle cx="40" cy="40" r="36" stroke="#3F5B33" stroke-width="1.2" fill="none"></circle>
+    <path d="M28 60 C 28 46, 26 36, 28 22" stroke="#6B4226" stroke-width="1.8" fill="none" stroke-linecap="round"></path>
+    <g fill="#3F5B33" opacity="0.92">
+      <ellipse cx="32" cy="18" rx="9" ry="6"></ellipse>
+      <ellipse cx="42" cy="22" rx="11" ry="7"></ellipse>
+      <ellipse cx="50" cy="30" rx="8" ry="6"></ellipse>
+      <ellipse cx="36" cy="28" rx="8" ry="6"></ellipse>
+    </g>
+    <g fill="#8FAE6E" opacity="0.85">
+      <ellipse cx="38" cy="14" rx="6" ry="4"></ellipse>
+      <ellipse cx="48" cy="18" rx="6" ry="4"></ellipse>
+    </g>
+    <path d="M10 60 L 70 60" stroke="#3F5B33" stroke-width="0.8" opacity="0.5"></path>
+  </g>
+
+  <text x="240" y="160" text-anchor="middle" font-family="&#39;Fraunces&#39;, &#39;Cormorant Garamond&#39;, Georgia, serif" font-size="56" font-weight="400" letter-spacing="0.02em" fill="#3F5B33" font-variation-settings="&#39;opsz&#39; 100, &#39;SOFT&#39; 80">Madhuvan</text>
+
+  <line x1="170" y1="184" x2="310" y2="184" stroke="#3F5B33" stroke-width="0.5"></line>
+
+  <text x="240" y="208" text-anchor="middle" font-family="&#39;Inter&#39;, sans-serif" font-size="11" font-weight="400" fill="#6B6258" letter-spacing="0.32em">PLOTS FOR A BETTER TOMORROW</text>
+
+  <text x="240" y="246" text-anchor="middle" font-family="&#39;Tiro Devanagari Hindi&#39;, &#39;Noto Serif Devanagari&#39;, serif" font-size="22" font-weight="400" fill="#9B9388" letter-spacing="0.1em">मधुवन</text>
+</svg>
