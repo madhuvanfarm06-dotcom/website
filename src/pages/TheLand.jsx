@@ -6,7 +6,7 @@ function PageHead() {
       <div className="page-head__photo"><img src="/img/aerial-08-river-curve.jpg" alt="" /></div>
       <div className="page-head__inner">
         <span className="page-head__eyebrow">The land</span>
-        <h1 className="page-head__title">Fourteen acres, <em>held in a bend.</em></h1>
+        <h1 className="page-head__title">Eight acres, <em>held in a bend.</em></h1>
         <span className="page-head__deva">पासुरे · Pasure village, Bhor taluka</span>
       </div>
     </header>
@@ -31,7 +31,7 @@ function Geography() {
       </div>
 
       <div className="factrow reveal" style={{ marginTop: '5rem' }}>
-        <div className="fact"><div className="fact__num">01</div><div className="fact__val">14 acres</div><div className="fact__lbl">Total land</div></div>
+        <div className="fact"><div className="fact__num">01</div><div className="fact__val">8 acres</div><div className="fact__lbl">Total land</div></div>
         <div className="fact"><div className="fact__num">02</div><div className="fact__val">720 m</div><div className="fact__lbl">Elevation above sea level</div></div>
         <div className="fact"><div className="fact__num">03</div><div className="fact__val">62 km</div><div className="fact__lbl">From Pune (Swargate)</div></div>
         <div className="fact"><div className="fact__num">04</div><div className="fact__val">2,000 mm</div><div className="fact__lbl">Annual rainfall</div></div>

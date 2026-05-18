@@ -8,6 +8,21 @@
 .contact-aside { display: flex; flex-direction: column; gap: 3rem; }
 .contact-block { display: flex; flex-direction: column; gap: 0.75rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
 .contact-block:first-child { border-top: none; padding-top: 0; }
+
+.contact-social {
+  display: flex; flex-direction: column; gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+.contact-social a {
+  display: inline-flex; align-items: center; gap: 0.85rem;
+  padding: 0.5rem 0;
+  color: var(--fg);
+  font-family: var(--font-body); font-size: 0.95rem;
+  border: none;
+  transition: color 200ms var(--ease-out);
+}
+.contact-social a svg { width: 20px; height: 20px; color: var(--forest); flex-shrink: 0; }
+.contact-social a:hover { color: var(--forest); border: none; }
 .contact-block__label {
   font-family: var(--font-body); font-size: 0.65rem; font-weight: 500;
   letter-spacing: var(--tracking-wider); text-transform: uppercase;

@@ -1,9 +1,48 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import { SOCIAL_LINKS, SocialIcon } from '../components/Footer.jsx';
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyoSBgl1SbmfsunIsUxMd15zTh3Y3AG8k9wpgG9-HehG3I_TBjd95lGmMxxyuyxyxo/exec";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "I am interested in a plot",
+    message: "",
+    source: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError("");
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      setSubmitted(true);
+      if (window.fbq) {
+        window.fbq('track', 'Lead', { content_name: formData.subject });
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <Page>
@@ -29,18 +68,8 @@ export default function Contact() {
 
             <div className="contact-block">
               <span className="contact-block__label">Phone</span>
-              <h3 className="contact-block__primary">+91 98XXX 12345</h3>
+              <h3 className="contact-block__primary">+917028722258</h3>
               <p className="contact-block__sub">If you would rather speak, please leave a message. We don't always pick up — we are usually on the land.</p>
-            </div>
-
-            <div className="contact-block">
-              <span className="contact-block__label">By post</span>
-              <h3 className="contact-block__primary" style={{ fontSize: '1.2rem', lineHeight: 1.4 }}>
-                Madhuvan<br />
-                Village Wadgaon Khurd<br />
-                Tal. Bhor, Dist. Pune 412 206<br />
-                Maharashtra, India
-              </h3>
             </div>
 
             <div className="contact-block">
@@ -49,6 +78,18 @@ export default function Contact() {
                 <div><strong>Mon – Fri</strong><span>Within 24 hours</span></div>
                 <div><strong>Sat – Sun</strong><span>By Monday morning</span></div>
                 <div><strong>Monsoon</strong><span>The internet is unreliable. Please be patient.</span></div>
+              </div>
+            </div>
+
+            <div className="contact-block">
+              <span className="contact-block__label">Find us on</span>
+              <div className="contact-social">
+                {SOCIAL_LINKS.map(s => (
+                  <a key={s.icon} href={s.url} target="_blank" rel="noreferrer" aria-label={s.name}>
+                    <SocialIcon name={s.icon} />
+                    <span>{s.name}</span>
+                  </a>
+                ))}
               </div>
             </div>
 
@@ -84,7 +125,7 @@ export default function Contact() {
               </p>
             </div>
           ) : (
-            <form className="contact-form reveal" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+            <form className="contact-form reveal" onSubmit={handleSubmit}>
               <div>
                 <span className="contact-block__label" style={{ display: 'block', marginBottom: '0.5rem' }}>The form</span>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 300, fontSize: '1.8rem', lineHeight: 1.2, margin: '0 0 0.5rem', letterSpacing: '-0.01em' }}>
@@ -96,18 +137,17 @@ export default function Contact() {
               </div>
 
               <div className="cf-row">
-                <div className="cf-field"><label>Your name</label><input type="text" placeholder="Your good name" /></div>
-                <div className="cf-field"><label>Email</label><input type="email" placeholder="you@example.com" required /></div>
+                <div className="cf-field"><label>Your name</label><input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your good name" /></div>
+                <div className="cf-field"><label>Email</label><input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" required /></div>
               </div>
 
               <div className="cf-row">
-                <div className="cf-field"><label>Phone (optional)</label><input type="tel" placeholder="+91 …" /></div>
+                <div className="cf-field"><label>Phone (optional)</label><input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 …" /></div>
                 <div className="cf-field">
                   <label>What is this about?</label>
-                  <select defaultValue="I am interested in a plot">
+                  <select name="subject" value={formData.subject} onChange={handleChange}>
                     <option>I am interested in a plot</option>
                     <option>I'd like to arrange a site visit</option>
-                    <option>I'd like to stay at the guest cottage</option>
                     <option>A question about the architecture</option>
                     <option>The journal / a press enquiry</option>
                     <option>Something else</option>
@@ -117,16 +157,22 @@ export default function Contact() {
 
               <div className="cf-field">
                 <label>Tell us a little about yourselves</label>
-                <textarea placeholder="Where you live now, what drew you to Madhuvan, what you imagine doing here, the season you love best, anything you want us to know." />
+                <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Where you live now, what drew you to Madhuvan, what you imagine doing here, the season you love best, anything you want us to know." />
               </div>
 
               <div className="cf-field">
                 <label>How did you find us</label>
-                <input type="text" placeholder="A friend, a magazine, a search, a journal we wrote in…" />
+                <input type="text" name="source" value={formData.source} onChange={handleChange} placeholder="A friend, a magazine, a search, a journal we wrote in…" />
               </div>
 
+              {error && (
+                <p style={{ color: '#b00020', fontFamily: 'var(--font-serif)', fontStyle: 'italic', margin: 0 }}>{error}</p>
+              )}
+
               <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap', paddingTop: '1rem', borderTop: '1px solid var(--rule)' }}>
-                <button type="submit" className="btn btn--primary btn--lg">Send the message →</button>
+                <button type="submit" className="btn btn--primary btn--lg" disabled={submitting}>
+                  {submitting ? 'Sending…' : 'Send the message →'}
+                </button>
                 <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', color: 'var(--fg-muted)', fontSize: '0.95rem' }}>We reply within 48 hours.</span>
               </div>
             </form>

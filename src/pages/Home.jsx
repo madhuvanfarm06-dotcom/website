@@ -38,7 +38,7 @@ function Hero() {
             </div>
             <div>
               <span className="home-hero__loc-label">Land</span>
-              <span className="home-hero__loc-val">14 acres &nbsp;·&nbsp; 11 parcels</span>
+              <span className="home-hero__loc-val">8 acres &nbsp;·&nbsp; 15 parcels</span>
             </div>
           </div>
           <div className="home-hero__cta">
@@ -65,10 +65,10 @@ function Intro() {
           <span>vasā · the dwelling-place</span>
         </div>
         <p className="home-intro__lede reveal reveal--slow">
-          Madhuvan is <em>fourteen acres of hillside</em> in Pasure village,
+          Madhuvan is <em>Eight acres of hillside</em> in Pasure village,
           where the Sahyadris fold into the Krishna basin and a slow bend of
           the river holds the land on three sides. We are placing a small
-          number of houses here — never more than eleven — among the trees
+          number of houses here — never more than fifteen — among the trees
           that were already standing, on plot lines that follow the contour
           of the slope.
         </p>
@@ -85,7 +85,7 @@ function Intro() {
 function Pillars() {
   const items = [
     { kicker: '01', title: 'The place',    lede: 'Sixty-two kilometres from Pune, where the Sahyadris fold into the Krishna basin. South-east facing, held in a bend of the river.', link: '/the-land', linkLabel: 'Read about the land', img: '/img/aerial-08-river-curve.jpg', caption: 'The bend of the river · summer, 2026' },
-    { kicker: '02', title: 'The plots',    lede: 'Eleven parcels, sized 8,200 to 18,000 sq.ft., each shaped by the contour rather than against it. Eight available, three reserved.', link: '/plots', linkLabel: 'See the site plan', img: '/img/aerial-07-overhead-plot.jpg', caption: 'Plot layout, May 2026' },
+    { kicker: '02', title: 'The plots',    lede: 'Fifteen parcels, sized 7,800 to 18,000 sq.ft., each shaped by the contour rather than against it. Eleven available, four reserved.', link: '/plots', linkLabel: 'See the site plan', img: '/img/aerial-07-overhead-plot.jpg', caption: 'Plot layout, May 2026' },
     { kicker: '03', title: 'The practice', lede: 'Dry-stacked basalt walls, lime plaster, country tile. Architecture by Studio Sahyādri. Landscape by Auroville Botanical Gardens.', link: '/journal', linkLabel: 'Read the journal', img: '/img/aerial-22-golden-hour.jpg', caption: 'Site, golden hour' },
   ];
   return (
@@ -172,7 +172,7 @@ function PlotsPreview() {
   return (
     <section className="section home-plots">
       <div className="sec-head reveal">
-        <span className="sec-head__eyebrow">Eleven parcels · Eight available</span>
+        <span className="sec-head__eyebrow">Fifteen parcels · Eleven available</span>
         <h2 className="sec-head__title">A few <em>still remain.</em></h2>
       </div>
       <div className="plots-row reveal">

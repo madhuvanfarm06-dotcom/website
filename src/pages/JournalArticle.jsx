@@ -60,9 +60,9 @@ export default function JournalArticle() {
 
           <h2>What we lost, what we kept</h2>
 
-          <p>The original drawings showed thirteen plots. The final plan shows eleven. We lost two plots — about twenty thousand square feet of saleable land — to trees. At market rates, that is somewhere around two crore rupees we will not earn.</p>
+          <p>The original drawings showed seventeen plots. The final plan shows fifteen. We lost two plots — about twenty thousand square feet of saleable land — to trees. At market rates, that is somewhere around two crore rupees we will not earn.</p>
 
-          <p>We have been asked, more than once, whether this was worth it. The honest answer is that we don't know. We are not yet finished selling the eleven, so we cannot tell you whether we have built something that the market rewards, or something it ignores. We can tell you that the families who have walked the land — and there have been thirty-six of them this year — have all, without exception, asked about the trees.</p>
+          <p>We have been asked, more than once, whether this was worth it. The honest answer is that we don't know. We are not yet finished selling the fifteen, so we cannot tell you whether we have built something that the market rewards, or something it ignores. We can tell you that the families who have walked the land — and there have been thirty-six of them this year — have all, without exception, asked about the trees.</p>
 
           <p>Some of them asked because they wanted to be sure they could cut the trees down on their own plot, after purchase. Those families we did not sell to.</p>
 
@@ -91,7 +91,7 @@ export default function JournalArticle() {
           <span className="sec-head__eyebrow" style={{ color: 'var(--leaf)' }}>If this resonated</span>
           <h3>You might want to <em>walk the land</em> with us.</h3>
           <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', color: 'rgba(250,246,238,0.85)', fontSize: '1.1rem', maxWidth: '42ch', margin: '0 0 1rem' }}>
-            We host site visits one weekend a month. We meet you at the gate, walk the eleven plots, and answer every question.
+            We host site visits one weekend a month. We meet you at the gate, walk the fifteen plots, and answer every question.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
             <Link to="/visit" className="btn btn--bone btn--lg">Plan a visit →</Link>

@@ -35,7 +35,7 @@ export default function Visit() {
             <div className="visit-card__num">01</div>
             <span className="visit-card__kicker">Site visit · Half-day</span>
             <h3 className="visit-card__title">A guided <em>walk</em> of the land.</h3>
-            <p className="visit-card__lede">We host site visits one weekend a month. You arrive at 9 am, we meet you at the gate, and we walk all eleven plots together. Tea, water, time to ask everything.</p>
+            <p className="visit-card__lede">We host site visits one weekend a month. You arrive at 9 am, we meet you at the gate, and we walk all fifteen plots together. Tea, water, time to ask everything.</p>
             <ul className="visit-card__list">
               <li><strong>Duration</strong><span>Three to four hours</span></li>
               <li><strong>Group size</strong><span>Up to four families per visit</span></li>

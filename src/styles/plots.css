@@ -1,85 +1,16 @@
-/* Plots page styles */
-.sitemap-grid {
-  display: grid; grid-template-columns: 1fr; gap: 2rem;
-}
-@media (min-width: 1000px) {
-  .sitemap-grid { grid-template-columns: 7fr 4fr; gap: 3rem; align-items: start; }
-}
-.sitemap-canvas {
-  position: relative; aspect-ratio: 1.1/1;
-  background: var(--bone); border: 1px solid var(--rule);
+/* Plots page — aerial site layout */
+.aerial-canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--bone);
+  border: 1px solid var(--rule);
   overflow: hidden;
 }
-.sitemap-svg { width: 100%; height: 100%; display: block; }
-.sitemap-canvas__lbl {
-  position: absolute;
-  font-family: var(--font-body); font-size: 0.62rem;
-  letter-spacing: var(--tracking-wider); text-transform: uppercase;
-  color: var(--fg-muted); pointer-events: none;
-}
-.sitemap-canvas__lbl--top { top: 1rem; left: 50%; transform: translateX(-50%); }
-.sitemap-canvas__lbl--bottom { bottom: 1rem; left: 50%; transform: translateX(-50%); color: #6B8AA0; }
-.sitemap-canvas__lbl--left { left: 1rem; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left center; }
-.sitemap-canvas__lbl--right { right: 1rem; top: 50%; transform: translateY(-50%) rotate(90deg); transform-origin: right center; }
-
-.sitemap-legend {
-  display: flex; flex-wrap: wrap; gap: 2rem;
-  padding: 2rem 0 0; margin-top: 2rem;
-  border-top: 1px solid var(--rule-soft);
-  align-items: center;
-}
-.sitemap-legend > div {
-  display: flex; align-items: center; gap: 0.65rem;
-  font-family: var(--font-body); font-size: 0.85rem; color: var(--fg-soft);
-}
-.leg { display: inline-block; width: 14px; height: 14px; border-radius: 2px; }
-.leg--avail { background: rgba(63,91,51,0.25); border: 1px solid var(--forest); }
-.leg--res { background: rgba(155,147,136,0.25); border: 1px solid var(--stone); }
-.leg--road { background: transparent; border: 1px dashed var(--bark); height: 2px; width: 18px; border-radius: 0; }
-.leg--green { background: rgba(143,174,110,0.5); border-radius: 50%; }
-.leg--water { background: rgba(196,210,220,0.7); border-radius: 4px; height: 8px; }
-
-.plot-detail {
-  background: var(--cream-warm);
-  padding: 2rem;
-  display: flex; flex-direction: column; gap: 1.25rem;
-  min-height: 540px;
-  animation: fadeup 360ms var(--ease-out);
-}
-.plot-detail--empty { background: transparent; border: 1px dashed var(--rule); justify-content: center; align-items: flex-start; }
-@keyframes fadeup { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-.plot-detail__top { display: flex; justify-content: space-between; align-items: baseline; }
-.plot-detail__id { font-family: var(--font-display); font-weight: 400; font-size: 2rem; color: var(--forest); letter-spacing: 0.02em; }
-.plot-detail__photo { aspect-ratio: 4/3; background: var(--cream-deep); display: flex; align-items: center; justify-content: center; }
-.plot-detail__rows { display: flex; flex-direction: column; border-top: 1px solid var(--rule-soft); }
-.plot-detail__rows > div {
-  display: flex; justify-content: space-between; padding: 0.85rem 0;
-  border-bottom: 1px solid var(--rule-soft);
-  font-family: var(--font-body); font-size: 0.85rem;
-}
-.plot-detail__rows span { color: var(--fg-muted); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.65rem; font-weight: 500; }
-.plot-detail__rows strong { font-family: var(--font-serif); font-weight: 400; font-style: italic; font-size: 1.05rem; color: var(--fg); }
-.plot-detail__note { font-family: var(--font-serif); font-style: italic; color: var(--fg-soft); margin: 0; line-height: 1.55; }
-
-.plot-table { display: flex; flex-direction: column; }
-.plot-table__head,
-.plot-table__row {
-  display: grid; grid-template-columns: 1fr 1.4fr 1.2fr 1.2fr 1fr auto;
-  gap: 1.5rem; padding: 1.2rem 0; align-items: baseline;
-  border-bottom: 1px solid var(--rule-soft);
-}
-.plot-table__head {
-  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
-  font-family: var(--font-body); font-size: 0.65rem; font-weight: 500;
-  letter-spacing: var(--tracking-wider); text-transform: uppercase;
-  color: var(--fg-muted);
-}
-.plot-table__row { font-family: var(--font-body); font-size: 0.9rem; color: var(--fg-soft); }
-.plot-table__id { font-family: var(--font-display); font-size: 1.25rem; color: var(--fg); letter-spacing: 0.02em; }
-.plot-table__row--reserved { opacity: 0.6; }
-.plot-table__link { font-family: var(--font-body); font-size: 0.7rem; font-weight: 500; letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--forest); border: none; }
-@media (max-width: 800px) {
-  .plot-table__head { display: none; }
-  .plot-table__row { grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; padding: 1.5rem 0; }
-  .plot-table__row > span:nth-child(6) { grid-column: 1 / -1; text-align: left; }
+.aerial-canvas__photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
 }

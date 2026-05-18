@@ -47,20 +47,12 @@ body {
   border: none;
 }
 .nav__brand:hover { border: none; }
-.nav__mark {
-  width: 30px; height: 30px;
+.nav__logo {
+  height: 56px; width: auto;
+  display: block;
+  transition: opacity 200ms var(--ease-out);
 }
-.nav__brand-latin {
-  font-family: var(--font-display); font-weight: 400;
-  font-size: 1.35rem; letter-spacing: 0.005em; color: var(--forest);
-  font-variation-settings: "opsz" 100, "SOFT" 80;
-  transition: color 400ms var(--ease-out);
-}
-.nav__brand-deva {
-  font-family: var(--font-deva); font-size: 0.9rem;
-  color: var(--fg-muted);
-  transition: color 400ms var(--ease-out);
-}
+.nav__brand:hover .nav__logo { opacity: 0.85; }
 .nav__links { display: flex; gap: 2rem; align-items: center; }
 .nav__link {
   font-family: var(--font-body); font-size: 0.7rem;
@@ -252,6 +244,23 @@ body {
   font-family: var(--font-body); font-size: 0.875rem;
 }
 .footer__col a:hover { color: var(--leaf); border: none; }
+.footer__social {
+  display: flex; gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+.footer__social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border: 1px solid var(--stone);
+  border-radius: 50%;
+  color: var(--bone);
+  padding: 0;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out), border-color 200ms var(--ease-out);
+}
+.footer__social a svg { width: 16px; height: 16px; display: block; }
+.footer__social a:hover {
+  background: var(--bone); color: var(--forest); border-color: var(--bone);
+}
 .footer__base {
   padding-top: 1.75rem; display: flex; justify-content: space-between;
   font-family: var(--font-body); font-size: 0.7rem;

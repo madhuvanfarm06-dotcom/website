@@ -10,7 +10,7 @@ const FAQ_SECTIONS = [
       {
         q: 'What is the size of each plot, and how many are there?',
         a: [
-          'Eleven plots in total. They range from 9,200 to 14,800 square feet — roughly a fifth to a third of an acre. Boundaries follow the contour, not a grid, so each plot has a slightly different shape.',
+          'Fifteen plots in total. They range from 7,800 to 18,000 square feet — roughly a fifth to a third of an acre. Boundaries follow the contour, not a grid, so each plot has a slightly different shape.',
           'Every plot has clear approach, level building area, mature trees we have asked to be kept, and at least one corner that catches the long view down the valley.'
         ]
       },

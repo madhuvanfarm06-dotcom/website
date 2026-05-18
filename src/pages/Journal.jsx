@@ -24,7 +24,7 @@ const ENTRIES = [
     img: '/img/aerial-23-late-light.jpg' },
   { date: 'February 2026', read: '9 min', category: 'Letters',
     title: 'A letter to those who are deciding, slowly.',
-    excerpt: 'We have met thirty-six families this year. Eleven have bought. The other twenty-five we still write to, sometimes.',
+    excerpt: 'We have met thirty-six families this year. Four have bought. The others we still write to, sometimes.',
     slug: 'among-the-trees',
     img: '/img/aerial-21-evening.jpg' },
   { date: 'December 2025', read: '7 min', category: 'Stories',
