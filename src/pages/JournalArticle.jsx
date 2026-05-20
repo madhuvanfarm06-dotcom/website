@@ -32,7 +32,7 @@ export default function JournalArticle() {
       <article>
         <header className="article-hero">
           <div className="article-hero__photo">
-            <img src="/img/aerial-19-mango-grove.jpg" alt="" />
+            <img src="/img/aerial-19-mango-grove.jpg" alt="The mango grove on the upper terrace" fetchpriority="high" decoding="async" />
           </div>
           <div className="article-hero__inner">
             <div className="article-hero__crumbs">
@@ -75,7 +75,7 @@ export default function JournalArticle() {
           <p>Over the next four months we catalogued the entire property. Forty-two native species, three hundred and eighty individual trees with a trunk diameter of more than fifteen centimetres at chest height. Forty-eight of them were over thirty years old. Eight were over a hundred — three banyans, two peepals, one tamarind, and two mangoes whose age we could not determine but which Bhau Sasane's father had referred to, in his diary, as "the old ones."</p>
 
           <figure>
-            <img src="/img/aerial-05-canopy.jpg" alt="A canopy of mango and tamarind, photographed from above." />
+            <img src="/img/aerial-05-canopy.jpg" alt="A canopy of mango and tamarind, photographed from above." loading="lazy" decoding="async" />
             <figcaption>The upper terrace, looking west, monsoon evening</figcaption>
           </figure>
 

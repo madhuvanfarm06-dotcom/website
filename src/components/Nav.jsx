@@ -30,7 +30,7 @@ export default function Nav({ overPhoto = false }) {
     <>
       <nav className={`nav ${scrolled ? 'nav--solid' : ''} ${overPhoto ? 'nav--over-photo' : ''}`}>
         <Link to="/" className="nav__brand" aria-label="Madhuvan — home">
-          <img className="nav__logo" src="/img/madhuvan-logo.png" alt="Madhuvan" />
+          <img className="nav__logo" src="/img/madhuvan-logo.png" alt="Madhuvan by Sun Developers" width="120" height="48" decoding="async" />
         </Link>
 
         <div className="nav__links">

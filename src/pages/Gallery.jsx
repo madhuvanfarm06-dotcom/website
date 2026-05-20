@@ -29,8 +29,8 @@ const PHOTOS = [
   { src: '/img/aerial-21-evening.jpg',       caption: 'Evening, the slope in shadow',                     date: 'May 2026', tag: 'aerial', size: 's' },
   { src: '/img/aerial-03-valley-east.jpg',   caption: 'East across the valley',                           date: 'May 2026', tag: 'aerial', size: 'w' },
   { src: '/img/aerial-24-dusk.jpg',          caption: 'Dusk, returning the camera',                       date: 'May 2026', tag: 'aerial', size: 't' },
-  { src: '/img/house-sunset.png',            caption: 'A first sketch of the house, against sunset',      date: 'October 2026', tag: 'house', size: 'w' },
-  { src: '/img/entrance-evening.png',        caption: 'The entrance, monsoon evening',                    date: 'July 2026', tag: 'house', size: 't' },
+  { src: '/img/house-sunset.jpg',            caption: 'A first sketch of the house, against sunset',      date: 'October 2026', tag: 'house', size: 'w' },
+  { src: '/img/entrance-evening.jpg',        caption: 'The entrance, monsoon evening',                    date: 'July 2026', tag: 'house', size: 't' },
   { src: '/img/river-bend.jpg',              caption: 'A frame of the bend, from the journal',            date: 'May 2026', tag: 'aerial', size: 'm' },
 ];
 
@@ -92,7 +92,7 @@ export default function Gallery() {
         <div className="gallery">
           {filtered.map((p, i) => (
             <div key={p.src} className={`gal-item gal-item--${p.size}`} style={{ animationDelay: `${i * 40}ms` }} onClick={() => setLightbox(i)}>
-              <img src={p.src} alt={p.caption} />
+              <img src={p.src} alt={p.caption} loading="lazy" decoding="async" />
               <div className="gal-item__caption">
                 <span>{p.caption}</span>
                 <span>{p.date}</span>

@@ -41,9 +41,9 @@ export default function Footer() {
           <div className="footer__brand-latin">Madhuvan</div>
           <div className="footer__brand-deva">मधुवन मन माती आणि निसर्गाच नातं</div>
           <p className="footer__tag">
-            Plots for a better tomorrow.<br />
-            A small settlement of homes among the trees, in a bend of the river,
-            sixty-two kilometres from Pune.
+            <strong>by Sun Developers</strong> · Farm house plots and agriculture
+            land near Pune. A small settlement of homes among the trees, in a
+            bend of the river, sixty-two kilometres from Pune.
           </p>
         </div>
         <div className="footer__col">
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer__base">
-        <span>© Madhuvan {new Date().getFullYear()}. All rights reserved.</span>
+        <span>© Madhuvan by Sun Developers, Pune · {new Date().getFullYear()}. All rights reserved.</span>
         <span>Survey No. 579 · RERA P52100099999</span>
       </div>
     </footer>

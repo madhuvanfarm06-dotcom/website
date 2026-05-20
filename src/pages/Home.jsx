@@ -18,7 +18,14 @@ function Hero() {
   return (
     <section className="home-hero">
       <div className="home-hero__photo" style={{ transform: photoTransform }}>
-        <img src="/img/aerial-01-river-bend.jpg" alt="Madhuvan, held in a bend of the river, with the Sahyadris in the distance" />
+        <img
+          src="/img/aerial-01-river-bend.jpg"
+          alt="Madhuvan, held in a bend of the river, with the Sahyadris in the distance"
+          fetchpriority="high"
+          decoding="async"
+          width="1920"
+          height="1440"
+        />
       </div>
       <div className="home-hero__veil" />
       <div className="home-hero__inner" style={{ opacity: overlayOpacity }}>
@@ -66,12 +73,12 @@ function Intro() {
           <span>vasā · the dwelling-place</span>
         </div>
         <p className="home-intro__lede reveal reveal--slow">
-          Madhuvan is <em>Eight acres of hillside</em> in Pasure village,
-          where the Sahyadris fold into the Krishna basin and a slow bend of
-          the river holds the land on three sides. We are placing a small
-          number of houses here — never more than fifteen — among the trees
-          that were already standing, on plot lines that follow the contour
-          of the slope.
+          Madhuvan, by <em>Sun Developers</em>, is eight acres of farm house
+          plots and agriculture land in Pasure village, where the Sahyadris
+          fold into the Krishna basin and a slow bend of the river holds the
+          land on three sides. Fifteen farmhouse plots, sixty-two kilometres
+          from Pune, on a south-east slope — placed among the trees that were
+          already standing.
         </p>
         <p className="home-intro__lede home-intro__lede--small reveal reveal--slow">
           Not a development. Not a colony. A settlement, in the older sense
@@ -118,7 +125,7 @@ function Filmstrip() {
   return (
     <section className="filmstrip">
       <div className="filmstrip__photo">
-        <img src="/img/aerial-23-late-light.jpg" alt="Late afternoon light over the slope" />
+        <img src="/img/aerial-23-late-light.jpg" alt="Late afternoon light over the slope" loading="lazy" decoding="async" />
       </div>
       <div className="filmstrip__caption">
         <span className="filmstrip__num">No. 01</span>
@@ -134,7 +141,7 @@ function LandPreview() {
     <section className="section home-land">
       <div className="twocol twocol--offset">
         <div className="twocol__photo reveal">
-          <img src="/img/aerial-05-canopy.jpg" alt="A canopy of mango and tamarind, from above" />
+          <img src="/img/aerial-05-canopy.jpg" alt="A canopy of mango and tamarind, from above" loading="lazy" decoding="async" />
           <span className="caption">A canopy of mango and tamarind</span>
         </div>
         <div className="twocol__body reveal" style={{ transitionDelay: '160ms' }}>
@@ -228,7 +235,7 @@ function HomeEnquire() {
   return (
     <section className="home-enquire">
       <div className="home-enquire__photo">
-        <img src="/img/aerial-21-evening.jpg" alt="" />
+        <img src="/img/aerial-21-evening.jpg" alt="Madhuvan in evening light — closing view" loading="lazy" decoding="async" />
       </div>
       <div className="home-enquire__overlay">
         <span className="home-enquire__eyebrow">A closing word</span>
@@ -287,9 +294,9 @@ export default function Home() {
   return (
     <Page overPhoto>
       <SEO
-        title="A few houses, held by the river — NA Plots near Pune"
-        description="Madhuvan by Sun Developers — 15 NA plots on 8 acres in Pasure, Bhor, 62 km from Pune. River-front land in a bend of the Velvandi, on the south-east slope of the Sahyadris. Clear title, gated, ready to register."
-        keywords="plots near Pune, NA plots Pune, plots in Bhor, plots in Pasure, farmhouse plots Pune, river-front plots Maharashtra, Sun Developers, Madhuvan, weekend home land Pune, second home Pune, Sahyadri plots, gated plots Pune"
+        title="Madhuvan by Sun Developers · Farm House Plots & Agriculture Land near Pune"
+        description="Sun Developers Pune — Madhuvan offers 15 farm house plots on 8 acres of agriculture land in Pasure, Bhor, 62 km from Pune. River-front farmhouse land in the Sahyadris. Clear title, RERA-registered, gated."
+        keywords="Madhuvan, Sun Developers, Sun Developers Pune, farm house plots, farm house, farmhouse, farmhouse plots near Pune, agriculture land, agriculture land near Pune, agricultural land Pune, farm land Pune, NA plots Pune, plots in Bhor, weekend home Pune, second home Pune, Sahyadri farmhouse"
         image="https://www.sun-developers.com/img/aerial-01-river-bend.jpg"
         jsonLd={homeJsonLd}
       />

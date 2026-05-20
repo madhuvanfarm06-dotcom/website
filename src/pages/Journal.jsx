@@ -53,7 +53,7 @@ function Featured() {
   return (
     <section className="section">
       <Link to={`/journal/${f.slug}`} className="featured reveal">
-        <div className="featured__photo"><img src={f.img} alt="" /></div>
+        <div className="featured__photo"><img src={f.img} alt={f.title} loading="lazy" decoding="async" /></div>
         <div className="featured__body">
           <span className="featured__eyebrow">Latest · {f.category}</span>
           <h2 className="featured__title">{f.title}</h2>

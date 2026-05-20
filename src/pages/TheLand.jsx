@@ -57,7 +57,7 @@ function Geology() {
         <div className="reveal" style={{ transitionDelay: '120ms' }}>
           <div style={{ display: 'grid', gap: '1rem' }}>
             <div style={{ aspectRatio: '4/5', overflow: 'hidden' }}>
-              <img src="/img/aerial-13-stream.jpg" alt="The seasonal stream, eastern edge" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="/img/aerial-13-stream.jpg" alt="The seasonal stream, eastern edge" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <span className="caption">Topsoil 50 cm, fractured basalt to 3 m</span>
           </div>
