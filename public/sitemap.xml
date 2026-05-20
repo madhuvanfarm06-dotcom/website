@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.sun-developers.com/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.sun-developers.com/img/aerial-01-river-bend.jpg</image:loc>
+      <image:title>Madhuvan — a small settlement of NA plots near Pune</image:title>
+      <image:caption>Aerial view of Madhuvan, held in a bend of the Velvandi river.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/the-land</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.sun-developers.com/img/aerial-08-river-curve.jpg</image:loc>
+      <image:title>The land at Madhuvan — 8 acres in Pasure, Bhor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/plots</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.sun-developers.com/img/plot-layout-aerial.jpg</image:loc>
+      <image:title>Madhuvan site plan — 15 NA plots near Pune</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/gallery</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.sun-developers.com/img/aerial-22-golden-hour.jpg</image:loc>
+      <image:title>Madhuvan gallery — aerial photographs of the land</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/journal</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/journal/among-the-trees</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/visit</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/contact</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sun-developers.com/faq</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

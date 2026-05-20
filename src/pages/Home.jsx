@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 
 /* HERO — cinematic full-bleed aerial with subtle parallax */
 function Hero() {
@@ -97,7 +98,7 @@ function Pillars() {
       <div className="pillars">
         {items.map((it, i) => (
           <article key={i} className="pillar reveal" style={{ transitionDelay: `${i * 120}ms` }}>
-            <div className="pillar__photo"><img src={it.img} alt="" /></div>
+            <div className="pillar__photo"><img src={it.img} alt={it.caption} loading="lazy" /></div>
             <div className="pillar__body">
               <div className="pillar__num">{it.kicker}</div>
               <h3 className="pillar__title">{it.title}</h3>
@@ -250,8 +251,48 @@ function HomeEnquire() {
 }
 
 export default function Home() {
+  const homeJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://www.sun-developers.com/#webpage',
+        url: 'https://www.sun-developers.com/',
+        name: 'Madhuvan by Sun Developers — NA Plots near Pune',
+        isPartOf: { '@id': 'https://www.sun-developers.com/#website' },
+        about: { '@id': 'https://www.sun-developers.com/#realestate' },
+        primaryImageOfPage: 'https://www.sun-developers.com/img/aerial-01-river-bend.jpg',
+        inLanguage: 'en-IN'
+      },
+      {
+        '@type': 'Place',
+        name: 'Madhuvan',
+        description: 'A small settlement of 15 NA plots on 8 acres in Pasure, Bhor — 62 km from Pune.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Survey No. 579, Pasure',
+          addressLocality: 'Bhor',
+          addressRegion: 'Maharashtra',
+          postalCode: '412206',
+          addressCountry: 'IN'
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 18.15,
+          longitude: 73.85
+        }
+      }
+    ]
+  };
   return (
     <Page overPhoto>
+      <SEO
+        title="A few houses, held by the river — NA Plots near Pune"
+        description="Madhuvan by Sun Developers — 15 NA plots on 8 acres in Pasure, Bhor, 62 km from Pune. River-front land in a bend of the Velvandi, on the south-east slope of the Sahyadris. Clear title, gated, ready to register."
+        keywords="plots near Pune, NA plots Pune, plots in Bhor, plots in Pasure, farmhouse plots Pune, river-front plots Maharashtra, Sun Developers, Madhuvan, weekend home land Pune, second home Pune, Sahyadri plots, gated plots Pune"
+        image="https://www.sun-developers.com/img/aerial-01-river-bend.jpg"
+        jsonLd={homeJsonLd}
+      />
       <Hero />
       <Intro />
       <Pillars />

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 import { SOCIAL_LINKS, SocialIcon } from '../components/Footer.jsx';
 
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyoSBgl1SbmfsunIsUxMd15zTh3Y3AG8k9wpgG9-HehG3I_TBjd95lGmMxxyuyxyxo/exec";
@@ -46,6 +47,11 @@ export default function Contact() {
 
   return (
     <Page>
+      <SEO
+        title="Contact · Enquire about a plot at Madhuvan"
+        description="Write to Sun Developers to begin a conversation about a plot at Madhuvan. We meet every interested family ourselves, walk the land together, and only sell when both sides are sure."
+        keywords="contact Sun Developers, enquire Madhuvan plot, buy plot near Pune, plot enquiry Bhor"
+      />
       <header className="page-head">
         <div className="page-head__inner">
           <span className="page-head__eyebrow">Contact</span>

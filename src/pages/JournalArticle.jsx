@@ -1,9 +1,34 @@
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 
 export default function JournalArticle() {
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'On placing a house among trees that were already there.',
+    image: 'https://www.sun-developers.com/img/aerial-19-mango-grove.jpg',
+    author: { '@type': 'Person', name: 'Aarya Sasane' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Madhuvan by Sun Developers',
+      logo: { '@type': 'ImageObject', url: 'https://www.sun-developers.com/favicon.png' }
+    },
+    datePublished: '2026-10-01',
+    dateModified: '2026-10-01',
+    mainEntityOfPage: 'https://www.sun-developers.com/journal/among-the-trees',
+    articleSection: 'On building'
+  };
   return (
     <Page overPhoto>
+      <SEO
+        title="On placing a house among trees that were already there"
+        description="We catalogued every tree on the property before drawing a single plot line. A long note on the argument between a development brief and the trees that came before it."
+        keywords="sustainable land development, tree-first planning, plot layout around trees, Madhuvan journal"
+        type="article"
+        image="https://www.sun-developers.com/img/aerial-19-mango-grove.jpg"
+        jsonLd={articleJsonLd}
+      />
       <article>
         <header className="article-hero">
           <div className="article-hero__photo">

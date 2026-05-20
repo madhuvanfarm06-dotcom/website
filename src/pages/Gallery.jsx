@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 
 /* 24 aerial frames from the May 2026 drone survey, plus a few sketches. */
 const PHOTOS = [
@@ -64,8 +65,14 @@ export default function Gallery() {
 
   return (
     <Page overPhoto>
+      <SEO
+        title="Gallery · Aerial photographs of Madhuvan"
+        description="24 aerial frames from the May 2026 drone survey of Madhuvan — the river, the canopy, the slope, the village. By Sun Developers."
+        keywords="Madhuvan photos, aerial photography Pune plots, drone survey Bhor, plot photographs"
+        image="https://www.sun-developers.com/img/aerial-22-golden-hour.jpg"
+      />
       <header className="page-head page-head--short">
-        <div className="page-head__photo"><img src="/img/aerial-01-river-bend.jpg" alt="" /></div>
+        <div className="page-head__photo"><img src="/img/aerial-01-river-bend.jpg" alt="Madhuvan held in a bend of the Velvandi river — aerial photograph, May 2026" loading="eager" /></div>
         <div className="page-head__inner">
           <span className="page-head__eyebrow">Gallery</span>
           <h1 className="page-head__title">Photographs of <em>the place.</em></h1>

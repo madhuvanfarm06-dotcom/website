@@ -1,9 +1,10 @@
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 
 function PageHead() {
   return (
     <header className="page-head">
-      <div className="page-head__photo"><img src="/img/aerial-08-river-curve.jpg" alt="" /></div>
+      <div className="page-head__photo"><img src="/img/aerial-08-river-curve.jpg" alt="Aerial view of the Velvandi river curving around the Madhuvan land at Pasure, Bhor" loading="eager" /></div>
       <div className="page-head__inner">
         <span className="page-head__eyebrow">The land</span>
         <h1 className="page-head__title">Eight acres, <em>held in a bend.</em></h1>
@@ -127,6 +128,12 @@ function Water() {
 export default function TheLand() {
   return (
     <Page overPhoto>
+      <SEO
+        title="The Land · 8 acres in Pasure, Bhor"
+        description="Eight acres on a south-east slope at 720 m, in a bend of the Velvandi river, in Pasure village, Bhor taluka — 62 km from Pune. Geology, vegetation, water and forty-two native species, catalogued."
+        keywords="land in Bhor, plots in Pasure, land near Pune, Sahyadri land, Velvandi river plots, 8 acres Pune, hillside plots Maharashtra"
+        image="https://www.sun-developers.com/img/aerial-08-river-curve.jpg"
+      />
       <PageHead />
       <Geography />
       <Geology />

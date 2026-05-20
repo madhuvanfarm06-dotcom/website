@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 
 export default function Visit() {
   const [type, setType] = useState('visit');
@@ -15,8 +16,14 @@ export default function Visit() {
 
   return (
     <Page overPhoto>
+      <SEO
+        title="Visit & Stay · Walk the land at Madhuvan"
+        description="Book a half-day site visit or a two-night stay at the Madhuvan guest cottage in Pasure, Bhor — 62 km from Pune. We host one weekend a month, up to four families per visit."
+        keywords="visit Madhuvan, site visit plots Pune, farmhouse stay Bhor, weekend visit Pune, Pasure village stay"
+        image="https://www.sun-developers.com/img/aerial-04-upper-terrace.jpg"
+      />
       <header className="page-head page-head--short">
-        <div className="page-head__photo"><img src="/img/aerial-04-upper-terrace.jpg" alt="" /></div>
+        <div className="page-head__photo"><img src="/img/aerial-04-upper-terrace.jpg" alt="The upper terrace at Madhuvan from above, where the guest cottage stands" loading="eager" /></div>
         <div className="page-head__inner">
           <span className="page-head__eyebrow">Visit &amp; stay</span>
           <h1 className="page-head__title">Walk the land. <em>Stay a night.</em></h1>

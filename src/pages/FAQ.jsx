@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 
 const FAQ_SECTIONS = [
   {
@@ -102,8 +103,28 @@ function Question({ q, a }) {
 }
 
 export default function FAQ() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_SECTIONS.flatMap(section =>
+      section.items.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a.join(' ')
+        }
+      }))
+    )
+  };
   return (
     <Page>
+      <SEO
+        title="FAQ · Questions about plots, building, and living at Madhuvan"
+        description="Frequently asked questions about Madhuvan — plot sizes, title, water, roads, electricity, building restrictions, costs, village relationship, and more. Honest answers from Sun Developers."
+        keywords="Madhuvan FAQ, plots near Pune FAQ, NA plot questions, buying land Bhor, plot title questions"
+        jsonLd={faqJsonLd}
+      />
       <header className="page-head">
         <div className="page-head__inner">
           <span className="page-head__eyebrow">Frequently asked</span>

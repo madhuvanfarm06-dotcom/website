@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Page from '../components/Page.jsx';
+import SEO from '../components/SEO.jsx';
 
 const ENTRIES = [
   { date: 'October 2026', read: '8 min', category: 'On building',
@@ -37,7 +38,7 @@ const ENTRIES = [
 function PageHead() {
   return (
     <header className="page-head page-head--short">
-      <div className="page-head__photo"><img src="/img/aerial-22-golden-hour.jpg" alt="" /></div>
+      <div className="page-head__photo"><img src="/img/aerial-22-golden-hour.jpg" alt="Golden hour over the Madhuvan land — aerial photograph" loading="eager" /></div>
       <div className="page-head__inner">
         <span className="page-head__eyebrow">Journal</span>
         <h1 className="page-head__title">Notes from <em>the land.</em></h1>
@@ -122,6 +123,13 @@ function Subscribe() {
 export default function Journal() {
   return (
     <Page overPhoto>
+      <SEO
+        title="Journal · Notes from the land"
+        description="A working journal from Madhuvan — on placing houses among existing trees, on monsoons and hillsides, on the forty-two species we have catalogued, on lime instead of cement. Updated each season."
+        keywords="Madhuvan journal, land development journal, Bhor land notes, Sun Developers writing, sustainable land development Maharashtra"
+        type="article"
+        image="https://www.sun-developers.com/img/aerial-22-golden-hour.jpg"
+      />
       <PageHead />
       <Featured />
       <Archive />

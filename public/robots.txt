@@ -1,0 +1,32 @@
+# Madhuvan by Sun Developers — robots.txt
+# https://www.sun-developers.com/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Major search engines — explicitly allow
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /img/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block AI scrapers that don't drive traffic (optional — remove if you want training inclusion)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://www.sun-developers.com/sitemap.xml
+
+# Host
+Host: https://www.sun-developers.com
